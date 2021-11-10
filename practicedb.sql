@@ -55,6 +55,8 @@ CREATE TABLE `player_stats` (
   `PlayerID` int NOT NULL,
   `Height` int NOT NULL,
   `Age` int NOT NULL,
+  `ShoeSize` int NOT NULL,
+  `Weight` int DEFAULT NULL,
   PRIMARY KEY (`PlayerID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -65,7 +67,7 @@ CREATE TABLE `player_stats` (
 
 LOCK TABLES `player_stats` WRITE;
 /*!40000 ALTER TABLE `player_stats` DISABLE KEYS */;
-INSERT INTO `player_stats` VALUES (1,203,31),(2,197,29),(3,217,33),(4,205,32),(5,198,30),(6,198,32),(7,202,29),(8,189,26),(9,197,35),(10,220,31);
+INSERT INTO `player_stats` VALUES (1,203,31,16,115),(2,197,29,14,120),(3,217,33,18,169),(4,205,32,16,107),(5,198,30,18,113),(6,198,32,15,142),(7,202,29,14,97),(8,189,26,15,142),(9,197,35,16,111),(10,220,31,14,157);
 /*!40000 ALTER TABLE `player_stats` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -80,7 +82,7 @@ CREATE TABLE `players` (
   `PlayerID` int NOT NULL AUTO_INCREMENT,
   `FirstName` varchar(100) DEFAULT NULL,
   `LastName` varchar(100) DEFAULT NULL,
-  `Team` varchar(100) DEFAULT NULL,
+  `TeamID` int NOT NULL,
   PRIMARY KEY (`PlayerID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -91,7 +93,7 @@ CREATE TABLE `players` (
 
 LOCK TABLES `players` WRITE;
 /*!40000 ALTER TABLE `players` DISABLE KEYS */;
-INSERT INTO `players` VALUES (1,'Paul','George','Los Angeles Clippers'),(2,'Damian','Lillard','Portland Trailblazers'),(3,'Kevin','Durant','Brooklyn Nets'),(4,'James','Harden','Brooklyn Nets'),(5,'Kyrie','Irving','Brooklyn Nets'),(6,'Steph','Curry','Golden State Warriors'),(7,'Klay','Thompson','Golden State Warriors'),(8,'Trae','Young','Atlanta Hawks'),(9,'Derrick','Rose','New York Knicks'),(10,'Kemba','Walker','New York Knicks');
+INSERT INTO `players` VALUES (1,'Paul','George',1),(2,'Damian','Lillard',4),(3,'Kevin','Durant',6),(4,'James','Harden',6),(5,'Kyrie','Irving',6),(6,'Steph','Curry',2),(7,'Klay','Thompson',2),(8,'Trae','Young',3),(9,'Derrick','Rose',5),(10,'Kemba','Walker',5);
 /*!40000 ALTER TABLE `players` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -104,4 +106,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-10 16:04:20
+-- Dump completed on 2021-11-10 16:54:21
