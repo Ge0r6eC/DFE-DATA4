@@ -6,3 +6,7 @@ This is the repository for files and code related to the above bootcamp learning
 I am making a change to practice git push
 
 I am now making a change to practice git pull
+
+Ok, Git restore worked and it restored my document to the prior clean commit. 
+
+
