@@ -140,17 +140,19 @@
 #fahrenheit.[ Formula : c/5 = f-32/9 [ where c = temperature
 # in celsius and f = temperature in fahrenheit ]
 
-print("Use me to convert between Celsius and Farenheit")
-print("Do you want to convert from C(celsius) or F(Farenheit)")
-Convert = str(input())
+# print("Use me to convert between Celsius and Farenheit")
+# print("Do you want to convert from C(celsius) or F(Farenheit)")
+# Convert = str(input())
 
-if Convert == ("C"):
-    tempC = int(input("Enter the temperature in Celsius here: "))
+# if Convert == ("C"):
+#     tempC = int(input("Enter the temperature in Celsius here: "))
     
-    tempF_convert = int(tempC*9/5 +32)
-    print(f"{tempC}C is equal to {tempF_convert} Farenheit")
-else:
-    tempF = int(input("Enter the temperature in Farenheit here: "))
+#     tempF_convert = int(tempC*9/5 +32)
+#     print(f"{tempC}C is equal to {tempF_convert} Farenheit")
+# else:
+#     tempF = int(input("Enter the temperature in Farenheit here: "))
     
-    tempC_convert = int((tempF-32)*5/9)
-    print(f"{tempF}F is equal to {tempC_convert} Celsius")
+#     tempC_convert = int((tempF-32)*5/9)
+#     print(f"{tempF}F is equal to {tempC_convert} Celsius")
+
+
