@@ -15,37 +15,49 @@ class Polygon:
 
     def perimeter(self):
         polygon_perimeter = (self.sides * self.sides_length)
-        
         return polygon_perimeter 
 
     def apothem(self):
         polygon_apothem = (self.sides_length / 2*(tan(180/self.sides)))
-       
-        return polygon_apothem
+        return int(polygon_apothem)
             
     def area(self):
-        self.p = # I want this to call the polygon_perimeter from above
-        self.a = # I want this to call the polygon_apothem from above 
+        self.p = self.perimeter()
+        self.a = self.apothem()
         polygon_area = 0.5 * self.p * self.a
-
         return polygon_area
 
+class Three_sided_polygon(Polygon):
+    def __init__(self, sides_length):
+        self.sides = 3
+        self.sides_length = sides_length
 
 class Four_sided_polygon(Polygon):
         
     def __init__(self, sides_length):
         self.sides = 4
         self.sides_length = sides_length
+
+class five_sided_polygon(Polygon):
+    def __init__(self, sides_length):
+        self.sides = 5
+        self.sides_length = sides_length
     
-    
+class six_sided_polygon(Polygon):
+    def __init__(self, sides_length):
+        self.sides = 6
+        self.sides_length = sides_length
+
+
 shape1 = Four_sided_polygon(10)
+shape2 = five_sided_polygon(10)
+
 
 print(shape1.perimeter())
 print(shape1.apothem())
 print(shape1.area())
 
-#print(f"The shape {shape1.name} has {shape1.sides()} sides")
+print(shape2.perimeter())
+print(shape2.apothem())
+print(shape2.area())
 
-
-
-# print(shape1.area_polygon())
