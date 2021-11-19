@@ -2,24 +2,50 @@
 # geometrical shapes, such as Rectanlges and Squares
 
 from abc import ABC, abstractmethod
+from math import tan
 
+# import pdb
+# pdb.set_trace()
 
 class Polygon:
-    @abstractmethod
-    def sides(self):
-        pass
+    
+    def __init__(self):
+        self.sides = 0
+        self.sides_length = 0
 
-    equal_sides = False
+    def perimeter(self):
+        polygon_perimeter = (self.sides * self.sides_length)
         
-class Quadrilateral(Polygon):
+        return polygon_perimeter 
+
+    def apothem(self):
+        polygon_apothem = (self.sides_length / 2*(tan(180/self.sides)))
+       
+        return polygon_apothem
+            
+    def area(self):
+        self.p = # I want this to call the polygon_perimeter from above
+        self.a = # I want this to call the polygon_apothem from above 
+        polygon_area = 0.5 * self.p * self.a
+
+        return polygon_area
+
+
+class Four_sided_polygon(Polygon):
+        
+    def __init__(self, sides_length):
+        self.sides = 4
+        self.sides_length = sides_length
     
-    def __init__(self, name):
-        self.name = name
     
-    def sides(self):
-        return 4
+shape1 = Four_sided_polygon(10)
+
+print(shape1.perimeter())
+print(shape1.apothem())
+print(shape1.area())
+
+#print(f"The shape {shape1.name} has {shape1.sides()} sides")
 
 
-shape1 = Quadrilateral("Square")
-shape2 = Quadrilateral("Rectangle")
 
+# print(shape1.area_polygon())

@@ -1,3 +1,9 @@
+
+with open("teams.txt", "w") as myfile:
+    teams = ["Clippers", "\n", "Timberwolves", "\n", "Pelicans", "\n", "Jazz", "\n", "Lakers","\n"]
+    myfile.writelines(teams)
+
+
 myfile = open ("teams.txt", "r")
 
 teams2 = myfile.readlines()
